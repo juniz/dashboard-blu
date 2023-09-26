@@ -30,8 +30,8 @@ export function SDMBar({props}: {props: any}) {
           axisLine={true}
           tickFormatter={(value) => `${value}`}
         />
-        <Bar dataKey="target" fill="#adfa1d" radius={[4, 4, 0, 0]} />
-        <Bar dataKey="real" fill="#1d8afa" radius={[4, 4, 0, 0]} />
+        <Bar dataKey="target" name="Target" fill="#adfa1d" radius={[4, 4, 0, 0]} />
+        <Bar dataKey="real" name="Capaian" fill="#1d8afa" radius={[4, 4, 0, 0]} />
         <Tooltip
           cursor={false}
           contentStyle={{

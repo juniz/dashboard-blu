@@ -13,7 +13,7 @@ export function TinyLine({data, name}: {data: any, name: string}) {
         <ResponsiveContainer width="100%" height={50}>
           <LineChart data={dataLine}>
             <XAxis dataKey="tahun" hide={true} />
-            <Line type="monotone" dataKey="capaian_individu" stroke="#8884d8" strokeWidth={2} />
+            <Line type="monotone" dataKey="capaian_individu" name='Capaian Individu' stroke="#8884d8" strokeWidth={2} />
             <Tooltip />
           </LineChart>
         </ResponsiveContainer>
