@@ -39,7 +39,7 @@ export default function PasienDashboard({tahun}:{tahun:number}) {
             ))}
         </div>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-8">
-            <Card className="col-span-3">
+            <Card className="col-span-5 lg:col-span-3">
             <CardHeader>
                 <CardTitle>Pelayanan Pasien</CardTitle>
             </CardHeader>
@@ -49,7 +49,7 @@ export default function PasienDashboard({tahun}:{tahun:number}) {
                 </div>
             </CardContent>
             </Card>
-            <Card className="col-span-3">
+            <Card className="col-span-5 lg:col-span-3">
             <CardHeader>
                 <CardTitle>Presentase Komplain dan Kepuasan Pasien</CardTitle>
             </CardHeader>
@@ -59,7 +59,7 @@ export default function PasienDashboard({tahun}:{tahun:number}) {
                 </div>
             </CardContent>
             </Card>
-            <Card className="col-span-2">
+            <Card className="col-span-5 lg:col-span-2">
             <CardHeader>
                 <CardTitle>Capaian</CardTitle>
             </CardHeader>

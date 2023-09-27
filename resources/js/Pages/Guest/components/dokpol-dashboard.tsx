@@ -46,7 +46,7 @@ export default function DokpolDashboard({tahun}:{tahun:number}) {
                 </div>
             </CardContent>
             </Card>
-            <Card className="col-span-2">
+            <Card className="col-span-5 lg:col-span-2">
             <CardHeader>
                 <CardTitle>Capaian</CardTitle>
             </CardHeader>

@@ -62,7 +62,7 @@ export default function SDMDashboard({tahun}:{tahun:number}) {
                 </div>
             </CardContent>
             </Card>
-            <Card className="col-span-2">
+            <Card className="col-span-3 lg:col-span-2">
             <CardHeader>
                 <CardTitle>Capaian</CardTitle>
             </CardHeader>
