@@ -27,7 +27,7 @@ export default function DashboardRenstra() {
           <div className="container flex h-16 items-center px-4 gap-2">
             <img src="/images/logo.png" alt="logo" className="w-10" />
             <h5 className="font-bold">RS BHAYANGKARA NGANJUK</h5>
-            <MainNav className="mx-6" />
+            {/* <MainNav className="mx-6" /> */}
             <div className="ml-auto flex items-center space-x-4">
               <ModeToggle />
             </div>
