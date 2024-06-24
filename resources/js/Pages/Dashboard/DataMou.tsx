@@ -1,4 +1,4 @@
-import DataTable from "react-data-table-component";
+// import DataTable from "react-data-table-component";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -76,15 +76,15 @@ const conditionalRowStyles = [
 export function DataMou({ mou }: { mou: any }) {
   return (
     <>
-      <DataTable
-        columns={columns}
+      {/* <DataTable
+      columns={columns}
         data={mou}
         conditionalRowStyles={conditionalRowStyles}
         selectableRows
         pagination
         highlightOnHover
         pointerOnHover
-      />
+      /> */}
     </>
   );
 }
