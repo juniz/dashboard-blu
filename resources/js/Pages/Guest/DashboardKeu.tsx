@@ -15,10 +15,24 @@ import { Head } from "@inertiajs/react";
 import { Label } from "@/Components/ui/label";
 import { ModeToggle } from "@/Components/mode-toggle";
 import { Tab } from "@headlessui/react";
-import KeuDashboard from "./Renstra/keu-dashboard";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/Components/ui/card";
+import dataKeu from "@/datas/keu";
+import { TinyLineKeu } from "@/Components/tiny-line-keu";
 
 export default function DashboardRenstra() {
   const [tahun, setTahun] = useState(2023);
+
+  const data = dataKeu.filter((item) => {
+    if (item.tahun == tahun) {
+      return item;
+    }
+  });
 
   return (
     <>
@@ -37,7 +51,7 @@ export default function DashboardRenstra() {
         <div className="flex-1 space-y-4 p-8 pt-6 container">
           <div className="flex items-center justify-between space-y-2">
             <h2 className="text-lg md:text-3xl lg:text-3xl font-bold tracking-tight">
-              Dashboard Rencana Strategis
+              Dashboard Keuangan
             </h2>
             <div className="flex items-center space-x-2">
               <Label className="invisible md:visible lg:visible">Tahun</Label>
@@ -54,26 +68,21 @@ export default function DashboardRenstra() {
               </Select>
             </div>
           </div>
-          <Tabs defaultValue="dokpol" className="space-y-4">
-            <TabsList>
-              <TabsTrigger value="dokpol">DOKPOL</TabsTrigger>
-              <TabsTrigger value="pelayanan">Pelayanan Kesehatan</TabsTrigger>
-              <TabsTrigger value="sdm">SDM</TabsTrigger>
-              <TabsTrigger value="keu">Keuangan</TabsTrigger>
-            </TabsList>
-            <TabsContent value="dokpol" className="space-y-4">
-              <DokpolDashboard tahun={tahun} />
-            </TabsContent>
-            <TabsContent value="pelayanan" className="space-y-4">
-              <PasienDashboard tahun={tahun} />
-            </TabsContent>
-            <TabsContent value="sdm" className="space-y-4">
-              <SDMDashboard tahun={tahun} />
-            </TabsContent>
-            <TabsContent value="keu" className="space-y-4">
-              <KeuDashboard tahun={tahun} />
-            </TabsContent>
-          </Tabs>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-6">
+            {/* {data.map((item, index) => (
+              <Card key={index}>
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                  <CardTitle className="text-sm font-medium">
+                    {item.tahun}
+                  </CardTitle>
+                  <div className="text-2xl font-bold">{item.target}%</div>
+                </CardHeader>
+                <CardContent>
+                  <TinyLineKeu data={data} name={item.pendapatan} />
+                </CardContent>
+              </Card>
+            ))} */}
+          </div>
         </div>
       </div>
     </>

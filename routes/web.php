@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Middleware\LoginStatus;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -19,9 +20,17 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Guest/DashboardRenstra');
 });
+Route::get('/keu', function () {
+    return Inertia::render('Guest/DashboardKeu');
+});
 
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-
+Route::middleware('loginStatus')->group(function () {
+    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+    Route::post('/mou', [App\Http\Controllers\DashboardController::class, 'simpanMou'])->name('mou.store');
+    // Route::get('/bios', [App\Http\Controllers\DashboardBiosController::class, 'index'])->name('bios');
+});
+// Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+// Route::post('/mou', [App\Http\Controllers\DashboardController::class, 'simpanMou'])->name('mou.store');
 Route::get('/bios', [App\Http\Controllers\DashboardBiosController::class, 'index'])->name('bios');
 
 // Route::get('/dashboard', function () {

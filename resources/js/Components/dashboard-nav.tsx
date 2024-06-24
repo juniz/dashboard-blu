@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Link, usePage } from "@inertiajs/react";
 
-export function MainNav({
+export function DashboardNav({
   className,
   ...props
 }: React.HTMLAttributes<HTMLElement>) {
@@ -12,21 +12,23 @@ export function MainNav({
       {...props}
     >
       <Link
-        href="/"
-        className={url === "/" ? "text-primary" : "text-sm font-medium"}
-      >
-        RENSTRA
-      </Link>
-      {/* <Link
-        href="/bios"
+        href="/dashboard"
         className={
-          url === "/bios"
+          url === "/dashboard" ? "text-primary" : "text-sm font-medium"
+        }
+      >
+        MOU
+      </Link>
+      <Link
+        href="/renstra"
+        className={
+          url === "/renstra"
             ? "text-primary transition-colors"
             : "text-sm font-medium transition-colors hover:text-primary"
         }
       >
-        BIOS
-      </Link> */}
+        RENSTRA
+      </Link>
     </nav>
   );
 }

@@ -36,16 +36,12 @@ class AuthenticatedSessionController extends Controller
         $this->validate($request, [
             'username' => 'required',
             'password' => 'required',
-            'poliklinik' => 'required'
         ], [
-            'email.required' => 'Username tidak boleh kosong',
-            'email.email' => 'Username tidak valid',
+            'username.required' => 'Username tidak boleh kosong',
             'password.required' => 'Password tidak boleh kosong',
-            'poliklinik.required' => 'Poliklinik tidak boleh kosong'
         ]);
 
         $cek = DB::table('user')
-            ->join("dokter", "dokter.kd_dokter", "=", DB::Raw("AES_DECRYPT(id_user, 'nur')"))
             ->whereRaw("id_user = AES_ENCRYPT('{$request->username}', 'nur')")
             ->selectRaw("AES_DECRYPT(id_user, 'nur') as id_user, AES_DECRYPT(password, 'windi') as password")
             ->first();
@@ -57,11 +53,11 @@ class AuthenticatedSessionController extends Controller
                 $request->session()->regenerate();
                 return redirect()->intended(RouteServiceProvider::HOME);
             } else {
-                dd($cek);
-                return redirect()->back()->with('error', 'Password salah');
+                // dd($cek);
+                return redirect()->back()->with('status', 'Password salah');
             }
         } else {
-            return redirect()->back()->with('error', 'Username tidak ditemukan');
+            return redirect()->back()->with('status', 'Username tidak ditemukan');
         }
         // $request->authenticate();
 
