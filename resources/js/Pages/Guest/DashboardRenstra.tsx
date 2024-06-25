@@ -16,6 +16,7 @@ import { Label } from "@/Components/ui/label";
 import { ModeToggle } from "@/Components/mode-toggle";
 import { Tab } from "@headlessui/react";
 import KeuDashboard from "./Renstra/keu-dashboard";
+import DiklitDashboard from "./Renstra/diklit-dashboard";
 
 export default function DashboardRenstra() {
   const [tahun, setTahun] = useState(2023);
@@ -60,6 +61,7 @@ export default function DashboardRenstra() {
               <TabsTrigger value="pelayanan">Pelayanan Kesehatan</TabsTrigger>
               <TabsTrigger value="sdm">SDM</TabsTrigger>
               <TabsTrigger value="keu">Keuangan</TabsTrigger>
+              {/* <TabsTrigger value="diklit">Diklit</TabsTrigger> */}
             </TabsList>
             <TabsContent value="dokpol" className="space-y-4">
               <DokpolDashboard tahun={tahun} />
@@ -73,6 +75,9 @@ export default function DashboardRenstra() {
             <TabsContent value="keu" className="space-y-4">
               <KeuDashboard tahun={tahun} />
             </TabsContent>
+            {/* <TabsContent value="diklit" className="space-y-4">
+              <DiklitDashboard tahun={tahun} />
+            </TabsContent> */}
           </Tabs>
         </div>
       </div>
