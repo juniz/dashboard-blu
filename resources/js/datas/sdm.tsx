@@ -1,6 +1,34 @@
 const dataSDM = [
   {
     name: "Jumlah pendidikan dan pelatihan pegawai",
+    target: 492,
+    real: 485,
+    bobot: 11.11,
+    capaian_individu: 101.68,
+    capaian: 11.3,
+    tahun: 2024,
+  },
+  {
+    name: "Presentase Penambahan pegawai",
+    target: 6,
+    real: 7.2,
+    bobot: 11.11,
+    capaian_individu: 120.0,
+    capaian: 13.33,
+    tahun: 2024,
+  },
+  {
+    name: "Jumlah sarana dan prasarana",
+    target: 69,
+    real: 59,
+    bobot: 11.11,
+    capaian_individu: 89.39,
+    capaian: 9.93,
+    tahun: 2024,
+  },
+
+  {
+    name: "Jumlah pendidikan dan pelatihan pegawai",
     target: 477,
     real: 485,
     bobot: 11.11,
@@ -26,7 +54,6 @@ const dataSDM = [
     capaian: 9.93,
     tahun: 2023,
   },
-
   {
     name: "Jumlah pendidikan dan pelatihan pegawai",
     target: 464,

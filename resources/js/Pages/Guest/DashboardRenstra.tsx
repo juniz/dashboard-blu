@@ -23,7 +23,7 @@ import RisikoDashboard from "./Renstra/resiko-dashboard";
 import LibraryDashboard from "./Renstra/library-dashboard";
 
 export default function DashboardRenstra() {
-  const [tahun, setTahun] = useState(2023);
+  const [tahun, setTahun] = useState(2024);
 
   return (
     <>
@@ -51,6 +51,7 @@ export default function DashboardRenstra() {
                   <SelectValue placeholder="Pilih Tahun" />
                 </SelectTrigger>
                 <SelectContent>
+                  <SelectItem value="2024">2024</SelectItem>
                   <SelectItem value="2023">2023</SelectItem>
                   <SelectItem value="2022">2022</SelectItem>
                   <SelectItem value="2021">2021</SelectItem>

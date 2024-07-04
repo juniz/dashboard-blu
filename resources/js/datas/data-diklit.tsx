@@ -290,6 +290,79 @@ const dataDiklit = [
     jumlah: 0,
     anggaran: 0,
   },
+
+  {
+    tahun: 2024,
+    bulan: "Jan",
+    jumlah: 0,
+    anggaran: 0,
+  },
+  {
+    tahun: 2024,
+    bulan: "Feb",
+    jumlah: 0,
+    anggaran: 0,
+  },
+  {
+    tahun: 2024,
+    bulan: "Mar",
+    jumlah: 0,
+    anggaran: 0,
+  },
+  {
+    tahun: 2024,
+    bulan: "Apr",
+    jumlah: 0,
+    anggaran: 0,
+  },
+  {
+    tahun: 2024,
+    bulan: "Mei",
+    jumlah: 0,
+    anggaran: 0,
+  },
+  {
+    tahun: 2024,
+    bulan: "Jun",
+    jumlah: 0,
+    anggaran: 0,
+  },
+  {
+    tahun: 2023,
+    bulan: "Jul",
+    jumlah: 9,
+    anggaran: 15187500,
+  },
+  {
+    tahun: 2024,
+    bulan: "Agu",
+    jumlah: 0,
+    anggaran: 0,
+  },
+  {
+    tahun: 2024,
+    bulan: "Sep",
+    jumlah: 0,
+    anggaran: 0,
+  },
+  {
+    tahun: 2024,
+    bulan: "Okt",
+    jumlah: 0,
+    anggaran: 0,
+  },
+  {
+    tahun: 2024,
+    bulan: "Nov",
+    jumlah: 0,
+    anggaran: 0,
+  },
+  {
+    tahun: 2024,
+    bulan: "Des",
+    jumlah: 0,
+    anggaran: 0,
+  },
 ];
 
 export default dataDiklit;

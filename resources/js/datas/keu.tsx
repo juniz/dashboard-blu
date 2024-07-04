@@ -20,6 +20,13 @@ const dataKeu = [
     pendapatan: 90594060212,
     belanja: 105362191713,
   },
+  {
+    tahun: 2024,
+    nama: "Target",
+    value: 0,
+    pendapatan: 0,
+    belanja: 0,
+  },
   // {
   //   tahun: 2021,
   //   name: "Pendapatan",

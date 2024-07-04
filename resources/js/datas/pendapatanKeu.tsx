@@ -14,6 +14,11 @@ const PendapatanKeu = [
     name: "Pendapatan",
     value: 90594060212,
   },
+  {
+    tahun: 2024,
+    name: "Pendapatan",
+    value: 0,
+  },
 ];
 
 export default PendapatanKeu;

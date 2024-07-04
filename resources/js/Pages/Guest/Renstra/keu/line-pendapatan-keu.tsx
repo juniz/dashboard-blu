@@ -14,7 +14,7 @@ export function LinePendapatanKeu({ data }: { data: any }) {
     (a: { tahun: number }, b: { tahun: number }) => a.tahun - b.tahun
   );
   return (
-    <ResponsiveContainer width="100%" height={150}>
+    <ResponsiveContainer width="100%" height={50}>
       <LineChart data={dataLine}>
         <XAxis dataKey="tahun" hide={true} />
         <Line
